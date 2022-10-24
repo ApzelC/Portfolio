@@ -1,0 +1,37 @@
+﻿//Axel Daniel Corona Ibarra A01425010
+//Axel Espinoza Sebastián A01425004
+//programa que calcule: Y=5*(A-B+C)
+clear
+INPUT
+STORE A
+INPUT 
+STORE B
+INPUT
+STORE C
+
+LOAD A 
+SUBT B
+ADD C
+STORE A
+clear
+STORE num
+
+loop1, LOAD num
+ADD cinco
+STORE num
+LOAD A
+SUBT uno
+STORE A
+SKIPCOND 400
+jump loop1
+
+LOAD num
+OUTPUT
+HALT
+
+A, DEC 0
+B, DEC 0
+C,DEC 0
+cinco,DEC 5
+uno,DEC 1
+num,DEC 0

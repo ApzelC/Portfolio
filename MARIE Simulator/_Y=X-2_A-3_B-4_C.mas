@@ -1,0 +1,86 @@
+﻿//Axel Daniel Corona Ibarra A01425010
+//Axel Espinoza Sebastián A01425004
+//programa que calcule: Y=X-2*A-3*B-4*C. X, A, B y C deben ser proporcionadas por el usuario.
+Clear
+Load dos
+Subt dos
+Subt dos
+Store dos
+Load tres 
+Subt tres
+Subt tres
+Store tres
+Load cuatro
+Subt cuatro
+Subt cuatro
+Store cuatro
+
+INPUT
+STORE A
+INPUT 
+STORE B
+INPUT
+STORE C
+INPUT
+STORE X
+
+LOOP1, LOAD num
+ADD dos
+STORE num
+LOAD A
+SUBT uno
+STORE A
+SKIPCOND 400
+JUMP LOOP1
+
+LOAD num
+STORE A
+CLEAR 
+STORE num
+
+LOOP2, LOAD num
+ADD tres
+STORE num
+LOAD B
+SUBT uno
+STORE B
+SKIPCOND 400
+JUMP LOOP2
+
+LOAD num
+STORE B
+CLEAR 
+STORE num
+
+LOOP3, LOAD num
+ADD cuatro
+STORE num
+LOAD C
+SUBT uno
+STORE C
+SKIPCOND 400
+JUMP LOOP3
+
+LOAD num
+STORE C
+CLEAR 
+STORE num
+
+LOAD A 
+ADD B
+ADD C
+ADD X
+STORE num
+LOAD num
+OUTPUT
+HALT
+
+A, DEC 0
+B, DEC 0
+C, DEC 0
+X, DEC 0
+uno, DEC 1
+num, DEC 0
+dos, DEC 2
+tres, DEC 3
+cuatro, DEC 4
