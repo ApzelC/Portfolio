@@ -1,0 +1,106 @@
+NOTA: EL COSTO ESTÁNDAR ES DE 50[MXN]
+
+ENVIAR UN PAQUETE Y UN SOBRE, DONDE EL SOBRE EXCEDA EL LIMITE DE DIMENSIONES Y SE COBRE UN MONTO EXTRA:
+
+Cuantos envios quiere hacer?: 2
+Qué desea enviar? [0 = Paquete] [1 = Sobre]: 1
+Nombre del destinatario: Daniel
+Direccion del destinatario: Calle2
+Ciudad del destinatario: Cuernavaca
+Estado del destinatario: 
+Morelos
+Postal del destinatario: 62270
+
+Nombre del remitente: Axel
+Direccion del remitente: Calle24
+Ciudad del remitente: Cuernavaca
+Estado del remitente: Morelos
+Postal del remitente: 62283
+largo: 40
+ancho: 30
+Precio extra: 25
+El costo del sobre es: 75
+Postal del remitente: 62283
+Postal del destinatario: 62270
+Dirección del destinatario: Calle2, Cuernavaca, Morelos.
+Dirección del remitente: Calle24, Cuernavaca, Morelos.
+Qué desea enviar? [0 = Paquete] [1 = Sobre]: 0
+Nombre del destinatario: Raul
+Direccion del destinatario: Calle93
+Ciudad del destinatario: Cuernavaca
+Estado del destinatario: Morelos
+Postal del destinatario: 62259
+
+Nombre del remitente: Saul
+Direccion del remitente: Calle23
+Ciudad del remitente: Cuautla
+Estado del remitente: Morelos
+Postal del remitente: 65320 
+largo: 50
+ancho: 65
+Profundidad: 40
+peso: 34
+costoKg: 22
+El costo del paquete es: 798 pesos
+Postal del remitente: 65320
+Postal del destinatario: 62259
+Dirección del remitente: Calle23, Cuautla, Morelos.
+Dirección del destinatario: Calle93, Cuernavaca, Morelos.
+El costo total de 2 envio(s) es: 873
+
+----------------------------------------------------------------------------------------
+
+ENVIAR UN SOBRE QUE NO EXCEDA EL LIMITE:
+
+Cuantos envios quiere hacer?: 1
+Qué desea enviar? [0 = Paquete] [1 = Sobre]: 1
+Nombre del destinatario: Raul
+Direccion del destinatario: Privada2
+Ciudad del destinatario: CDMX
+Estado del destinatario: CDMX
+Postal del destinatario: 54321 
+
+Nombre del remitente: Sergio
+Direccion del remitente: Calle12
+Ciudad del remitente: Iguala
+Estado del remitente: Guerrero
+Postal del remitente: 68923
+largo[cm]: 20
+ancho[cm]: 15
+Precio extra: 55
+
+El costo del sobre es: 50
+Postal del remitente: 68923
+Postal del destinatario: 54321
+Dirección del destinatario: Privada2, CDMX, CDMX.
+Dirección del remitente: CAlle12, Iguala, Guerrero.
+El costo total de 1 envio(s) es: 50
+
+----------------------------------------------------------------------------------------
+ENVIAR UN PAQUETE:
+
+Cuantos envios quiere hacer?: 1
+Qué desea enviar? [0 = Paquete] [1 = Sobre]: 0
+Nombre del destinatario: Axel
+Direccion del destinatario: Calle44
+Ciudad del destinatario: Cuernavaca
+Estado del destinatario: Morelos
+Postal del destinatario: 62240
+
+Nombre del remitente: Martha
+Direccion del remitente: Calle55
+Ciudad del remitente: Monterrey
+Estado del remitente: NvoLeon
+Postal del remitente: 64231
+largo[cm]: 50
+ancho[cm]: 60
+Profundidad[cm]: 30
+peso[Kg]: 55
+costoKg[MXN]: 25
+
+El costo del paquete es: 1425 pesos
+Postal del remitente: 64231
+Postal del destinatario: 62240
+Dirección del remitente: Calle55, Monterrey, NvoLeon.
+Dirección del destinatario: Calle44, Cuernavaca, Morelos.
+El costo total de 1 envio(s) es: 1425

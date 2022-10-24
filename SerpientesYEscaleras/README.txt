@@ -1,0 +1,3 @@
+Primero que nada utilizamos las clases, cada una con su respectivo archivo .h y .cpp; también utilizamos distintas librerias para el uso correcto de nuestro dado y arrojara los números de manera correcta, posteriormente utilizamos #include para incluir una clase en otra y poder utilizar sus atributos en una clase distinta. 
+Hicimos uso de modificadores de acceso tipo private y public.
+Un poco más específico, utilizamos ciclos while y estructuras como if, else if y else. Así como en nuestro menú empleamos switch.
