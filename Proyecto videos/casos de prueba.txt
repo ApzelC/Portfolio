@@ -1,0 +1,684 @@
+SIN ARCHIVO//////////////////////////////////////////////////////////////////////////////////////////////
+
+----BIENVENIDO A TECFLIX----
+¿Qué deseas hacer?
+1. Ver películas. 
+2. Ver series. 
+3. Salir. 
+1
+/-----PELICULAS-----/
+Archivo no encontrado
+Verifiquelo e inténtelo de nuevo...
+
+Quieres calificar alguna pelicula? [si = 1][no = 0]: 
+
+
+CALIFICAR UNA PELICULA /////////////////////////////////////////////////////////////////////////////////
+
+----BIENVENIDO A TECFLIX----
+¿Qué deseas hacer?
+1. Ver películas. 
+2. Ver series. 
+3. Salir. 
+1
+/-----PELICULAS-----/
+========================
+***Número de video: 16
+Nombre:Spiderman
+Género: Accion
+ID: 100
+Duración: 150 mins
+Calificacion:  4.2
+========================
+***Número de video: 17
+Nombre:Encanto
+Género:Drama
+ID: 200
+Duración: 99 mins
+Calificacion:  3.6
+========================
+***Número de video: 18
+Nombre:Batman
+Género: Accion
+ID:300
+Duración: 175 mins
+Calificacion:  4
+========================
+***Número de video: 19
+Nombre:Jurassic World
+Género: Accion
+ID: 400
+Duración: 120 mins
+Calificacion:  3.2
+========================
+***Número de video: 20
+Nombre:Joker
+Género: Drama
+ID:500
+Duración: 135 mins
+Calificacion:  4.5
+========================
+***Número de video: 21
+Nombre:Harry Potter
+Género: Misterio
+ID: 600
+Duración: 154 mins
+Calificacion:  4.6
+========================
+***Número de video: 22
+Nombre:Minions
+Género: Accion
+ID: 700
+Duración: 120 mins
+Calificacion:  3.5
+========================
+***Número de video: 23
+Nombre:Avengers
+Género: Accion
+ID: 800
+Duración: 140 mins
+Calificacion:  4.1
+========================
+***Número de video: 24
+Nombre:Dune
+Género: Drama
+ID: 900
+Duración: 160 mins
+Calificacion:  4.5
+========================
+***Número de video: 25
+Nombre:Scream
+Género: Misterio
+ID:1000
+Duración: 130 mins
+Calificacion:  3.6
+========================
+***Número de video: 26
+Nombre:Viernes 13
+Género: Misterio
+ID:1100
+Duración: 145 mins
+Calificacion:  4.2
+
+Quieres calificar alguna pelicula? [si = 1][no = 0]: 1
+
+Introduce el Número de pelicula a modificar: 17
+
+
+================
+Nombre: Encanto
+Género: Drama
+ID: 200
+Duración: 99
+Calificación: 3.6
+
+
+que calificacion quieres ponerle [1-5]
+5
+
+
+================
+Nombre: Encanto
+Género: Drama
+ID: 200
+Duración: 99
+Calificación: 5
+
+
+Quieres calificar otro video? [si = 1][no = 0]:
+0
+Gracias
+===================
+
+Nombre: Spiderman
+Género:  Accion
+ID: 100
+Duración: 150
+Calificación: 4.2
+===================
+
+Nombre: Encanto
+Género: Drama
+ID: 200
+Duración: 99
+Calificación: 5
+===================
+
+Nombre: Batman
+Género:  Accion
+ID: 300
+Duración: 175
+Calificación: 4
+===================
+
+Nombre: Jurassic World
+Género:  Accion
+ID: 400
+Duración: 120
+Calificación: 3.2
+===================
+
+Nombre: Joker
+Género:  Drama
+ID: 500
+Duración: 135
+Calificación: 4.5
+===================
+
+Nombre: Harry Potter
+Género:  Misterio
+ID: 600
+Duración: 154
+Calificación: 4.6
+===================
+
+Nombre: Minions
+Género:  Accion
+ID: 700
+Duración: 120
+Calificación: 3.5
+===================
+
+Nombre: Avengers
+Género:  Accion
+ID: 800
+Duración: 140
+Calificación: 4.1
+===================
+
+Nombre: Dune
+Género:  Drama
+ID: 900
+Duración: 160
+Calificación: 4.5
+===================
+
+Nombre: Scream
+Género:  Misterio
+ID: 1000
+Duración: 130
+Calificación: 3.6
+===================
+
+Nombre: Viernes 13
+Género:  Misterio
+ID: 1100
+Duración: 145
+Calificación: 4.2
+
+
+CALIFICAR 2 PELICULAS ///////////////////////////////////////////////////////////////////////////////
+
+----BIENVENIDO A TECFLIX----
+¿Qué deseas hacer?
+1. Ver películas. 
+2. Ver series. 
+3. Salir. 
+1
+/-----PELICULAS-----/
+========================
+***Número de video: 16
+Nombre:Spiderman
+Género: Accion
+ID: 100
+Duración: 150 mins
+Calificacion:  4.2
+========================
+***Número de video: 17
+Nombre:Encanto
+Género:Drama
+ID: 200
+Duración: 99 mins
+Calificacion:  3.6
+========================
+***Número de video: 18
+Nombre:Batman
+Género: Accion
+ID:300
+Duración: 175 mins
+Calificacion:  4
+========================
+***Número de video: 19
+Nombre:Jurassic World
+Género: Accion
+ID: 400
+Duración: 120 mins
+Calificacion:  3.2
+========================
+***Número de video: 20
+Nombre:Joker
+Género: Drama
+ID:500
+Duración: 135 mins
+Calificacion:  4.5
+========================
+***Número de video: 21
+Nombre:Harry Potter
+Género: Misterio
+ID: 600
+Duración: 154 mins
+Calificacion:  4.6
+========================
+***Número de video: 22
+Nombre:Minions
+Género: Accion
+ID: 700
+Duración: 120 mins
+Calificacion:  3.5
+========================
+***Número de video: 23
+Nombre:Avengers
+Género: Accion
+ID: 800
+Duración: 140 mins
+Calificacion:  4.1
+========================
+***Número de video: 24
+Nombre:Dune
+Género: Drama
+ID: 900
+Duración: 160 mins
+Calificacion:  4.5
+========================
+***Número de video: 25
+Nombre:Scream
+Género: Misterio
+ID:1000
+Duración: 130 mins
+Calificacion:  3.6
+========================
+***Número de video: 26
+Nombre:Viernes 13
+Género: Misterio
+ID:1100
+Duración: 145 mins
+Calificacion:  4.2
+
+Quieres calificar alguna pelicula? [si = 1][no = 0]: 1
+
+Introduce el Número de pelicula a modificar: 18
+
+
+================
+Nombre: Batman
+Género:  Accion
+ID: 300
+Duración: 175
+Calificación: 4
+
+
+que calificacion quieres ponerle [1-5]
+2
+
+
+================
+Nombre: Batman
+Género:  Accion
+ID: 300
+Duración: 175
+Calificación: 2
+
+
+Quieres calificar otro video? [si = 1][no = 0]:
+1
+
+Quieres calificar alguna pelicula? [si = 1][no = 0]: 1
+
+Introduce el Número de pelicula a modificar: 17
+
+
+================
+Nombre: Encanto
+Género: Drama
+ID: 200
+Duración: 99
+Calificación: 3.6
+
+
+que calificacion quieres ponerle [1-5]
+1
+
+
+================
+Nombre: Encanto
+Género: Drama
+ID: 200
+Duración: 99
+Calificación: 1
+
+
+Quieres calificar otro video? [si = 1][no = 0]:
+0
+Gracias
+===================
+
+Nombre: Spiderman
+Género:  Accion
+ID: 100
+Duración: 150
+Calificación: 4.2
+===================
+
+Nombre: Encanto
+Género: Drama
+ID: 200
+Duración: 99
+Calificación: 1
+===================
+
+Nombre: Batman
+Género:  Accion
+ID: 300
+Duración: 175
+Calificación: 2
+===================
+
+Nombre: Jurassic World
+Género:  Accion
+ID: 400
+Duración: 120
+Calificación: 3.2
+===================
+
+Nombre: Joker
+Género:  Drama
+ID: 500
+Duración: 135
+Calificación: 4.5
+===================
+
+Nombre: Harry Potter
+Género:  Misterio
+ID: 600
+Duración: 154
+Calificación: 4.6
+===================
+
+Nombre: Minions
+Género:  Accion
+ID: 700
+Duración: 120
+Calificación: 3.5
+===================
+
+Nombre: Avengers
+Género:  Accion
+ID: 800
+Duración: 140
+Calificación: 4.1
+===================
+
+Nombre: Dune
+Género:  Drama
+ID: 900
+Duración: 160
+Calificación: 4.5
+===================
+
+Nombre: Scream
+Género:  Misterio
+ID: 1000
+Duración: 130
+Calificación: 3.6
+===================
+
+Nombre: Viernes 13
+Género:  Misterio
+ID: 1100
+Duración: 145
+Calificación: 4.2
+
+
+CALIFICAR UN EPISODIO Y UNA SERIE /////////////////////////////////////////////////////////////////////
+----BIENVENIDO A TECFLIX----
+¿Qué deseas hacer?
+1. Ver películas. 
+2. Ver series. 
+3. Salir. 
+2
+/--------SERIES--------/
+========================
+***Número de video: 1
+Nombre:Game Of Thrones
+Género: Accion
+ID: 001
+Duración: 69.7
+Temporada: 02
+Calificacion:  4.2
+====EPISODIO 1====
+***Número de video: 2
+Titulo del episodio: EpsiodioUno
+Número de episodio:1
+Temporada:1
+Calificacion: 3.7
+====EPISODIO 2====
+***Número de video: 3
+Titulo del episodio: EpsiodioDos
+Número de episodio:2
+Temporada:1
+Calificacion: 4
+====EPISODIO 3====
+***Número de video: 4
+Titulo del episodio: EpsiodioTres
+Número de episodio:3
+Temporada:1
+Calificacion: 4.3
+========================
+***Número de video: 5
+Nombre:La casa de papel
+Género: Accion
+ID: 002
+Duración: 50.3
+Temporada: 02
+Calificacion:  4.5
+====EPISODIO 1====
+***Número de video: 6
+Titulo del episodio: Inicio
+Número de episodio:1
+Temporada:2
+Calificacion:  4.5
+====EPISODIO 2====
+***Número de video: 7
+Titulo del episodio: Tokyo
+Número de episodio:2
+Temporada:2
+Calificacion:  4.5
+====EPISODIO 3====
+***Número de video: 8
+Titulo del episodio: Río
+Número de episodio:3
+Temporada:2
+Calificacion:  4.5
+========================
+***Número de video: 9
+Nombre:Stranger Things
+Género: Misterio
+ID: 003
+Duración: 48
+Temporada: 04
+Calificacion:  4.9
+====EPISODIO 1====
+***Número de video: 10
+Titulo del episodio: Will
+Número de episodio:1
+Temporada:4
+Calificacion: 4
+====EPISODIO 2====
+***Número de video: 11
+Titulo del episodio: Eleven
+Número de episodio:2
+Temporada:4
+Calificacion: 4
+====EPISODIO 3====
+***Número de video: 12
+Titulo del episodio: Dustin
+Número de episodio:3
+Temporada:4
+Calificacion: 4
+========================
+***Número de video: 13
+Nombre:Breaking bad
+Género: Accion
+ID: 004
+Duración: 54
+Temporada: 01
+Calificacion:  3.9
+====EPISODIO 1====
+***Número de video: 14
+Titulo del episodio: un
+Número de episodio:1
+Temporada:4
+Calificacion: 4
+====EPISODIO 2====
+***Número de video: 15
+Titulo del episodio: deux
+Número de episodio:2
+Temporada:4
+Calificacion: 4
+====EPISODIO 3====
+***Número de video: 16
+Titulo del episodio: trois
+Número de episodio:3
+Temporada:4
+Calificacion: 4
+
+Quieres calificar alguna serie? [si = 1][no = 0]: 1
+
+Introduce el Número de video a modificar: 2
+
+
+================
+Título de episodio:  EpsiodioUno
+Episodio: 1
+Temporada: 1
+Calificación: 3.7
+
+
+que calificacion quieres ponerle [1-5]
+4
+
+
+================
+Título de episodio:  EpsiodioUno
+Episodio: 1
+Temporada: 1
+Calificación: 4
+
+
+Quieres calificar otra serie? [si = 1][no = 0]:
+1
+
+Quieres calificar alguna serie? [si = 1][no = 0]: 1
+
+Introduce el Número de video a modificar: 13
+
+
+================
+Nombre: Breaking bad
+Género:  Accion
+ID: 4
+Duración: 54
+Calificación: 3.9
+
+que calificacion quieres ponerle [1-5]
+5
+
+
+================
+Nombre: Breaking bad
+Género:  Accion
+ID: 4
+Duración: 54
+Calificación: 5
+
+Quieres calificar otra serie? [si = 1][no = 0]:
+0
+=========Gracias==========
+========================
+Nombre:Game Of Thrones
+Género: Accion
+ID:1
+Duración:69
+Temporada:2
+Calificacion: 4.2
+====EPISODIO ====
+Titulo del episodio: EpsiodioUno
+Número de episodio:1
+Temporada:1
+Calificacion: 4
+====EPISODIO ====
+Titulo del episodio: EpsiodioDos
+Número de episodio:2
+Temporada:1
+Calificacion: 4
+====EPISODIO ====
+Titulo del episodio: EpsiodioTres
+Número de episodio:3
+Temporada:1
+Calificacion: 4.3
+========================
+Nombre:La casa de papel
+Género: Accion
+ID:2
+Duración:50
+Temporada:2
+Calificacion: 4.5
+====EPISODIO ====
+Titulo del episodio: Inicio
+Número de episodio:1
+Temporada:2
+Calificacion: 4.5
+====EPISODIO ====
+Titulo del episodio: Tokyo
+Número de episodio:2
+Temporada:2
+Calificacion: 4.5
+====EPISODIO ====
+Titulo del episodio: Río
+Número de episodio:3
+Temporada:2
+Calificacion: 4.5
+========================
+Nombre:Stranger Things
+Género: Misterio
+ID:3
+Duración:48
+Temporada:4
+Calificacion: 4.9
+====EPISODIO ====
+Titulo del episodio: Will
+Número de episodio:1
+Temporada:4
+Calificacion: 4
+====EPISODIO ====
+Titulo del episodio: Eleven
+Número de episodio:2
+Temporada:4
+Calificacion: 4
+====EPISODIO ====
+Titulo del episodio: Dustin
+Número de episodio:3
+Temporada:4
+Calificacion: 4
+========================
+Nombre:Breaking bad
+Género: Accion
+ID:4
+Duración:54
+Temporada:1
+Calificacion: 5
+====EPISODIO ====
+Titulo del episodio: un
+Número de episodio:1
+Temporada:4
+Calificacion: 4
+====EPISODIO ====
+Titulo del episodio: deux
+Número de episodio:2
+Temporada:4
+Calificacion: 4
+====EPISODIO ====
+Titulo del episodio: trois
+Número de episodio:3
+Temporada:4
+Calificacion: 4

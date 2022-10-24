@@ -1,0 +1,17 @@
+nombre,genero,id,duracion,tituloEp,episodio,temporada, calificacion
+Game Of Thrones, Accion, 001, 69.7, Ola, 01, 02, 4.2
+ x, x,33 ,0 , EpsiodioUno,1,1,3.7
+ x, x,0 ,0 , EpsiodioDos,2,1,4
+ x, x,0 ,0 , EpsiodioTres,3,1,4.3
+La casa de papel, Accion, 002, 50.3, tokyo, 03, 02, 4.5
+ x, x,0,0, Inicio,1,2, 4.5
+ x, x,0,0, Tokyo,2,2, 4.5
+ x, x,0,0, Río,3,2, 4.5
+Stranger Things, Misterio, 003, 48, Si, 09, 04, 4.9
+ x, x,0,0, Will,1,4,4
+ x, x,0,0, Eleven,2,4,4
+ x, x,0,0, Dustin,3,4,4
+Breaking bad, Accion, 004, 54, Uno, 01, 01, 3.9
+ x, x,0,0, un,1,4,4
+ x, x,0,0, deux,2,4,4
+ x, x,0,0, trois,3,4,4

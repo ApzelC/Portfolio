@@ -1,0 +1,12 @@
+nombre,genero,id,duracion, calificacion
+Spiderman, Accion, 100, 150 mins, 4.2
+Encanto,Drama, 200, 99 mins, 3.6
+Batman, Accion,300, 175 mins, 4
+Jurassic World, Accion, 400, 120 mins, 3.2
+Joker, Drama,500, 135 mins, 4.5
+Harry Potter, Misterio, 600, 154 mins, 4.6
+Minions, Accion, 700, 120 mins, 3.5
+Avengers, Accion, 800, 140 mins, 4.1
+Dune, Drama, 900, 160 mins, 4.5
+Scream, Misterio,1000, 130 mins, 3.6
+Viernes 13, Misterio,1100, 145 mins, 4.2
