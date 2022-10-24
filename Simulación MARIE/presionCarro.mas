@@ -1,0 +1,43 @@
+﻿clear		
+
+Input
+store presionCarro
+
+load presionLim
+output
+subt presionCarro
+output
+store presionLim
+
+// mayor es mayor que cero
+// menor es negativo
+// normal es cero
+
+comparador1, load presionLim
+Skipcond 800
+jump comparador2
+jump menor
+
+comparador2, load presionLim
+Skipcond 000
+jump normal
+jump mayor
+
+menor, load menosuno
+output
+halt
+
+normal, load cero
+output
+halt
+
+mayor, load uno
+output
+halt
+
+
+presionCarro, DEC 0
+presionLim, DEC 100
+menosuno, DEC -1
+cero, DEC 0
+uno, DEC 1

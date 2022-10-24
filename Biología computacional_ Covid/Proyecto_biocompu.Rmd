@@ -1,0 +1,272 @@
+---
+title: "**COMPARACIÓN DE GENOMAS DE DIFERENTES ESPECIES**"
+output: html_document
+---
+Axel Espinoza Sebastián A01425004, Axel Daniel Corona Ibarra A01425010.
+<!--- agreguen sus nombres -->
+
+## Primero que nada, ¿qué es la biología computacional? 
+Ésta es la intersección de tres ramas sumamente importantes del pensamiento humano, la biología, la matemática y las ciencias computacionales. Implica el desarrollo y la aplicación de métodos de analítica de datos y  métodos teóricos , modelación matemática y técnicas de simulación computacional para el estudio de sistemas biológicos, ecológicos, sociales y de comportamiento.
+
+## Con lo anterior resuelto, podemos pasar a la siguiente pregunta, ¿qué es el Sars-Cov-2?
+El SARS-CoV-2 es un virus de la gran familia de los coronavirus. Los coronavirus infectan a seres humanos y algunos animales. La infección por el SARS-CoV-2 en las personas se identificó por primera vez en 2019. Se piensa que este virus se transmite de una persona a otra en las gotitas que se dispersan cuando la persona infectada tose, estornuda o habla (NIH, 2020).
+
+## <u> Procedimiento: </u>
+Se analizará el virus Sars-Cov-2 en huéspedes animales, más en concreto en pangolines, ya que estos tienen una relación directa en la aparacición de la enfremedad del covid 19. Para demostrar sus posibles mutaciones, se realizará una comparación de genes con la variante original. 
+
+
+<center>![](http://assets.stickpng.com/images/5c7d23b472f5d9028c17ec1e.png){width='300px'}</center>
+
+## Hipótesis
+Nuestra hipótesis es que al comparar los genomas Pangolin y Wuhan tendremos pequeños cambios, ya que se cree que el origen del virus Sars-CoV2 proviene de este animal. Ahora bien, al compararlo con la secuencia original esperamos que no varíe demasiado.
+
+## Procesamiento de datos:
+Utilizamos y comparamos dos genomas, el original de Wuhan y el detectado en un pangolin. Hay que tomar en cuenta que el genoma del pangolin consta de 29,761 nucleotidos, mientras que el de Wuhan tiene 29,881; al realizar la comparación, limitamos los nucleotidos de 1 a 150 para un mejor funcionamiento en el programa, y al finalizar se encontraron 103 mutaciones en sus nucleótidos únicos donde principalmente se encuentra UtoA.
+
+
+```{r include=FALSE}
+#Evidencia
+
+library(seqinr)
+library(ggplot2)
+library(dplyr)
+library(ggmsa)
+
+
+#Constantes 
+trad = c(UUU="FPhe", UUC="FPhe", UUA="LLeu", UUG="LLeu", UCU="SSer", 
+         UCC="SSer", UCA="SSer", UCG="SSer", UAU="YTyr", UAC="YTyr", 
+         UAA='-', UAG='-', UGU="CCys", UGC="CCys", UGA='-', UGG="WTrp", 
+         CUU="LLeu", CUC="LLeu", CUA="LLeu", CUG="LLeu", CCU="PPro", 
+         CCC="PPro", CCA="PPro", CCG="PPro", CAU="HHis", CAC="HHis", 
+         CAA="QGln", CAG="QGln", CGU="RArg", CGC="RArg", CGA="RArg", 
+         CGG="RArg", AUU="IIle", AUC="IIle", AUA="IIle", AUG="MMet", 
+         ACU="TThr", ACC="TThr", ACA="TThr", ACG="TThr", AAU="NAsn", 
+         AAC="NAsn", AAA="KLys", AAG="KLys", AGU="SSer", AGC="SSer", 
+         AGA="RArg", AGG="RArg", GUU="VVal", GUC="VVal", GUA="VVal", 
+         GUG="VVal", GCU="AAla", GCC="AAla", GCA="AAla", GCG="AAla", 
+         GAU="DAsp", GAC="DAsp", GAA="EGlu", GAG="EGlu", GGU="GGly", 
+         GGC="GGly", GGA="GGly", GGG="GGly");
+
+
+seqorg = read.fasta("seqoriginal.txt")
+seqpang = read.fasta("pangseqq.txt")
+
+
+dnaO = toupper(seqorg[[3]])
+dnaP = toupper(seqpang[[3]])
+
+dnaO[dnaO == "T"] = "U"
+dnaP[dnaP == "T"] = "U"
+
+
+#Alineación
+A = toupper(seqorg[[3]])[1:150]
+B = toupper(seqpang[[3]])[1:150]
+
+m = matrix(data=0,nrow=length(B)+1, ncol=length(A)+1)
+m[1, ] = seq(0,length(A))*-2
+m[ ,1] = seq(0,length(B))*-2
+m
+
+CalcularPeso = function(fila, col){
+  if (A[col-1]==B[fila-1]) diagonal = m[fila-1,col-1] + 1
+  else diagonal = m[fila-1,col-1] - 1
+  up = m[fila-1,col] - 2
+  left = m[fila,col-1] - 2
+  peso = max (diagonal, up, left)
+  return (peso)
+}
+
+for (fila in seq(2,length(B)+1)){
+  for (col in seq(2,length(A)+1)){
+    m[fila, col] = CalcularPeso(fila, col) 
+  }
+}
+m
+
+fila = length(B)+1
+col = length(A)+1
+solA = solB = c()
+while(fila>1 || col>1){
+  if (col>1 && fila>1 && A[col-1]==B[fila-1]){
+    solA = c(A[col-1], solA)
+    solB = c(B[fila-1], solB)
+    col = col - 1
+    fila = fila -1
+  }else{
+    if (col>1 && fila>1 && m[fila-1, col-1]>m[fila, col-1] && m[fila-1, col-1]>m[fila-1, col]){
+      solA = c(A[col-1], solA)
+      solB = c(B[fila-1], solB)
+      col = col - 1
+      fila = fila -1
+    }else if (fila==1 || (col>1 && m[fila, col-1] > m[fila-1, col])){
+      solA = c(A[col-1], solA)
+      solB = c("_", solB)
+      col = col - 1
+    }else if (col==1 || (fila>1 && m[fila, col-1] <= m[fila-1, col])){
+      solA = c("_", solA)
+      solB = c(B[fila-1], solB)
+      fila = fila - 1 
+    }
+  }
+}
+sol = matrix(data=c(solA,solB),nrow = 2, ncol = length(solA), byrow = TRUE)
+sol
+```
+<center>
+## Alineación de secuencias Pangolin-Humano
+</center>
+
+```{r echo=FALSE}
+sol
+```
+
+## Porcentaje de similitud entre secuencias
+
+```{r include=FALSE}
+
+counter = length(solA)
+counter2 = 0
+acc = 0
+for(i in 1:counter) {
+  if(solA[i] == solB[i]) {
+    acc = acc + 1
+  }
+}
+acc = acc / counter
+acc = acc * 100
+cat("Similtud de", acc, "%")
+
+```
+
+```{r echo=FALSE}
+cat("Similtud de", acc, "%")
+```
+
+## Rsultados: Mutaciones y gráfica de la comparación
+
+```{r pressure, include=FALSE}
+library(dplyr)
+library(seqinr)
+library(ggplot2)
+cat("\014") 
+
+# Constants
+trad = c(UUU="FPhe", UUC="FPhe", UUA="LLeu", UUG="LLeu", UCU="SSer", 
+         UCC="SSer", UCA="SSer", UCG="SSer", UAU="YTyr", UAC="YTyr", 
+         UAA='-', UAG='-', UGU="CCys", UGC="CCys", UGA='-', UGG="WTrp", 
+         CUU="LLeu", CUC="LLeu", CUA="LLeu", CUG="LLeu", CCU="PPro", 
+         CCC="PPro", CCA="PPro", CCG="PPro", CAU="HHis", CAC="HHis", 
+         CAA="QGln", CAG="QGln", CGU="RArg", CGC="RArg", CGA="RArg", 
+         CGG="RArg", AUU="IIle", AUC="IIle", AUA="IIle", AUG="MMet", 
+         ACU="TThr", ACC="TThr", ACA="TThr", ACG="TThr", AAU="NAsn", 
+         AAC="NAsn", AAA="KLys", AAG="KLys", AGU="SSer", AGC="SSer", 
+         AGA="RArg", AGG="RArg", GUU="VVal", GUC="VVal", GUA="VVal", 
+         GUG="VVal", GCU="AAla", GCC="AAla", GCA="AAla", GCG="AAla", 
+         GAU="DAsp", GAC="DAsp", GAA="EGlu", GAG="EGlu", GGU="GGly", 
+         GGC="GGly", GGA="GGly", GGG="GGly");
+
+# Main
+original = read.fasta("seqoriginal.txt")
+mexican = read.fasta("pangseqq.txt")
+dnaO = original[[3]][1:150]
+dnaM = mexican[[3]][1:150]
+dnaO = toupper(dnaO)
+dnaM = toupper(dnaM)
+# Data frame
+df = data.frame(
+  mutation = character(), 
+  nucleo = numeric(), 
+  codon = character(), 
+  protein = character(), 
+  index = numeric()
+)
+df
+str(df)
+
+dnaO[dnaO == "T"] = "U"
+dnaM[dnaM == "T"] = "U"
+
+
+TF = which(dnaO != dnaM);
+
+arrayIndex = 0
+counter = 0
+
+if(length(TF) > 0) {
+  print(paste(length(TF), "Nucleoditos"))
+  for (i in TF) {
+    mutation = paste(dnaO[i], "to", dnaM[i], sep = "")
+    start = i - (i - 1) %% 3
+    startG = 21563 + start
+    index = as.integer(i/3 + 1)
+    codonO = paste(dnaO[start], dnaO[start + 1], dnaO[start + 2], sep = "")
+    codonM = paste(dnaM[start], dnaM[start + 1], dnaM[start + 2], sep = "")
+    newCodon = paste(codonO, startG, codonM, sep = "")
+    newAmino = paste(trad[codonO], index, trad[codonM], sep = "")
+    print(paste(mutation, startG, newCodon, newAmino, index))
+    newRow = list(mutation, startG, newCodon, newAmino, index)
+    df[nrow(df) + 1, ] = newRow
+  }
+}
+
+# Graficas
+p = ggplot(df)
+p = p + aes(x=mutation, fill=mutation, label=..count..)
+p = p + ggtitle("Mutaciones en Gen. Original y Gen. Pangolin")
+p = p + labs(x= "Mutacion", y= "Frecuencia", fill= "Mutaciones")
+p = p + geom_bar(stat = "count") 
+p = p + geom_text(stat = "count", vjust= 0)
+p
+```
+
+## A continuación, podemos observar la gráfica con sus mtuaciones correspondientes, donde nos percatamos que la mayor mutación esta en Uto.
+
+```{r echo=FALSE}
+p
+df
+```
+
+```{r include=FALSE}
+OrgSec = read.fasta("seqoriginal.txt")
+PangSec = read.fasta("pangseqq.txt")
+
+nueva = list()
+nueva[[1]] = toupper(OrgSec[[3]]) [1:100]
+nueva[[2]] = toupper(PangSec[[3]]) [1:100]
+names(nueva) = c( attr(OrgSec[[3]],"name"), 
+                  attr(PangSec[[3]],"name") )
+str(nueva)
+nueva[[1]]
+nueva[[2]]
+
+write.fasta(sequences = nueva, names= names(nueva), file.out = "output.fasta");
+
+multi = Biostrings::readAAMultipleAlignment("output.fasta")
+ggmsa(multi, start=40, end=60, seq_name = TRUE, color = "Zappo_NT")
+```
+
+## Aquí se puede observar de una mejor manera la comparación entred dos secuencias, las cuales a pesar de sus pocos nucleótidos varian muchos cambios
+
+```{r echo=FALSE}
+
+write.fasta(sequences = nueva, names= names(nueva), file.out = "output.fasta");
+
+multi = Biostrings::readAAMultipleAlignment("output.fasta")
+ggmsa(multi, start=40, end=60, seq_name = TRUE, color = "Zappo_NT")
+
+```
+
+
+
+## Conclusión
+Al finalizar nuestra investigación podemos refutar nuestra hipótesis, ya que hubo un número de mutaciones mayor al esperado. Creemos que las multiples mutaciones se deben al cambio de especie en el virus, ya que se comparan dos especies distintas.
+
+
+#### Referencias:
+Diccionario de cáncer del NCI. (s. f.). Instituto Nacional del Cáncer. Recuperado 1 de mayo de 2022, de <https://www.cancer.gov/espanol/publicaciones/diccionarios/diccionario-cancer/def/sars-cov-2>
+
+
+
+
