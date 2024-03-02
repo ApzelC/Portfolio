@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="mis_tareas">Mis Notas</string>
+    <string name="nueva_nota">Nueva Nota</string>
+    <string name="volver">Volver</string>
+    <string name="no_tienes_notas_agrega_una">No tienes notas, agrega una :)</string>
+    <string name="mas">+</string>
+</resources>
