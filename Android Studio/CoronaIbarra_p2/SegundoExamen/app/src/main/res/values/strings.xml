@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SegundoExamen</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="agregar_">Agregar</string>
+    <string name="visualizar">Visualizar</string>
+    <string name="sincronizar">Sincronizar</string>
+    <string name="titulo_del_recordatorio">Titulo del recordatorio</string>
+    <string name="descripci_n_del_recordatorio">Descripción del recordatorio</string>
+    <string name="no_tienes_ning_n_recordatorio">No tienes ningún recordatorio</string>
+</resources>

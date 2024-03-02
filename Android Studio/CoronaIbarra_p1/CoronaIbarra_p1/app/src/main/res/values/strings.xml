@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CoronaIbarra_p1</string>
+    <string name="latitud">Latitud</string>
+    <string name="estado">Estado</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="nombre">Nombre</string>
+    <string name="longitud">Longitud</string>
+    <string name="enviar">Enviar</string>
+    <string name="visualizar">Visualizar</string>
+    <string name="volver">Volver</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="men_principal">Menú principal</string>
+</resources>
